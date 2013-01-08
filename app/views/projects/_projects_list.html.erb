@@ -1,0 +1,14 @@
+<div class="autoscroll">
+  <table class="list projects">
+    <thead><tr>
+      <%= sort_header_tag('id', :caption => '#', :default_order => 'desc') %>
+      <% query.columns.each do |column| %>
+        <%= column_header(column) %>
+      <% end %>
+    </tr></thead>
+    <tbody>
+      <%= render :partial => 'project_row', :collection => projects, :as  => 'project', :locals => {:query => query } %>
+    </tbody>
+  </table>
+  <p class="pagination"><%= pagination_links_full @project_pages, @projects_count %></p>
+</div>

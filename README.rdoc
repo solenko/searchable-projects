@@ -1,0 +1,3 @@
+= serchable_projects
+
+Replace default projects index page with searchable table view

@@ -1,0 +1,4 @@
+<tr id="<%= dom_id(project) %>" class="hascontextmenu <%= cycle('odd', 'even') %> <%= project.css_classes %>">
+  <td><%= link_to project.id, project_path(project) %></td>
+  <%= raw query.columns.map {|column| "<td class=\"#{column.css_classes}\">#{column_content(column, project)}</td>"}.join %>
+</tr>
